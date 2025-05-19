@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/593638309867045540/eb606ca5606c4fedb7314bafc92c2fda/artifacts
+end_time: 1747643165272
+entry_point_name: ''
+experiment_id: '593638309867045540'
+lifecycle_stage: active
+run_id: eb606ca5606c4fedb7314bafc92c2fda
+run_name: logistic_run
+run_uuid: eb606ca5606c4fedb7314bafc92c2fda
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1747643158238
+status: 3
+tags: []
+user_id: salma

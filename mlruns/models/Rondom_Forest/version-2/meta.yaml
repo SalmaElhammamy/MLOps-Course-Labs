@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1747647101293
+current_stage: None
+description: ''
+last_updated_timestamp: 1747647101293
+name: Rondom_Forest
+run_id: 1a59e6be83804cf4a8d100315f2d9026
+run_link: ''
+source: models:/Rondom_Forest/1
+status: READY
+status_message: null
+storage_location: mlflow-artifacts:/593638309867045540/1a59e6be83804cf4a8d100315f2d9026/artifacts/model
+user_id: null
+version: 2
