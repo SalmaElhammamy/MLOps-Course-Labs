@@ -1,28 +1,41 @@
+version: '3.8'
+
 services:
   api:
-    build: api
+    build: ./api   
     ports:
-      - 8086:8000
+      - "8086:8000"  
     volumes:
       - models:/mlruns
-
-
+    networks:
+      - monitoring
 
   prometheus:
     image: prom/prometheus:latest
     ports:
-      - 9090:9090
+      - "9090:9090"
     volumes:
-      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
     command:
       - "--config.file=/etc/prometheus/prometheus.yml"
+    networks:
+      - monitoring
 
   grafana:
     image: grafana/grafana:latest
-    user: "472"
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    user: "472"  
     depends_on:
       - prometheus
     ports:
-      - 3000:3000
+      - "3000:3000"
+    networks:
+      - monitoring
+
 volumes:
   models:
+
+networks:
+  monitoring:
