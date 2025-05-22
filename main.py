@@ -40,7 +40,7 @@ def read_root():
 
 @app.get("/health")
 def health_check():
-    return {"status": "ok"}
+    return {"status": "OK"}
 
 @app.post("/predict")
 async def predict(data: CustomerData, request: Request):
